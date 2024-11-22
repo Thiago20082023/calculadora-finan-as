@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Unificada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    input, button {
+      display: block;
+      margin: 10px;
+      width: calc(100% - 40px);
+      max-width: 300px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      max-width: 150px;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Calculadora de Imposto</h2>
+    <input type="number" id="salario" placeholder="Salário Mensal">
+    <button onclick="PegaValoresImposto()">Calcular Imposto</button>
+    <div class="result" id="resultadoImposto"></div>
+    
+    <h2>Calculadora de Investimento</h2>
+    <input type="number" id="patrimonio" placeholder="Valor Inicial">
+    <input type="number" id="custo" placeholder="Investimento Mensal">
+    <input type="number" id="taxaInvest" placeholder="Taxa de Investimento Mês (%)">
+    <input type="number" id="taxaInfl" placeholder="Taxa de Inflação Mês (%)">
+    <input type="number" id="tempo" placeholder="Tempo (meses)">
+    <button onclick="PegaValoresInvestimento()">Calcular Investimento</button>
+    <div class="result" id="resultadoInvestimento"></div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
